@@ -1,0 +1,24 @@
+[user]
+	name = Alexander Mazurov
+	email = a.mazurov@criteo.com
+[github]
+	user = mazurov
+[credential]
+	helper = osxkeychain
+[diff]
+    tool = meld
+
+[alias]
+    dt = difftool --dir-diff
+
+[core]
+	editor = subl -n -w
+	excludesfile = /Users/a.mazurov/.gitignore_global
+
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
