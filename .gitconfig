@@ -1,24 +1,20 @@
 [user]
-	name = Alexander Mazurov
+	name = a.mazurov
 	email = a.mazurov@criteo.com
-[github]
-	user = mazurov
-[credential]
-	helper = osxkeychain
-[diff]
-    tool = meld
-
-[alias]
-    dt = difftool --dir-diff
-
 [core]
-	editor = subl -n -w
-	excludesfile = /Users/a.mazurov/.gitignore_global
-
-
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    editor = code -n -w
+    excludesfile = /Users/a.mazurov/.gitignore_global
+[alias]
+    b = branch -av
+    ll = log --branches --remotes --graph --pretty=format:'%Cred%h%Creset - %s %C(bold blue)<%an>%Creset %Cgreen(%cr)%C(yellow)%d%Creset'
+    l = log --branches --remotes --graph --pretty=format:'%Cred%h%Creset - %s %C(bold blue)<%an>%Creset %Cgreen(%cr)%C(yellow)%d%Creset' --max-count=40
+    s = status
+    d = diff
+    ds = diff --staged
+    dic = diff --cached
+    co = checkout
+    undo = git reset --soft HEAD^
+    amend = commit --amend
+    review = push origin HEAD:refs/publish/master
+    draft = push origin HEAD:refs/drafts/master
+    files = show --pretty="" --name-only
